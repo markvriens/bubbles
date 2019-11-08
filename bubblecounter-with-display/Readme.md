@@ -1,15 +1,21 @@
 # Project - Bubble counter with a display - ESP8266
 
 Using:
-- adafruit-feather-huzzah-esp8266 [ref](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/overview)
-- ir-breakbeam-sensors [ref](https://learn.adafruit.com/ir-breakbeam-sensors/arduino)
-- display (Seriële Witte OLED Display Module 128X64 I2C SSD1306 12864 Lcd-scherm)
-- beer fermentation airlock [ref example](https://www.braumarkt.com/waterslot-bolletjesmodel)
+- adafruit-feather-huzzah-esp8266 [ref](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/overview) ~20 euro
+- ir-breakbeam-sensors [ref](https://learn.adafruit.com/ir-breakbeam-sensors/arduino) ~3 euro
+- display (Seriële Witte OLED Display Module 128X64 I2C SSD1306 12864 Lcd-scherm) ~1,66 euro
+- beer fermentation airlock [ref example](https://www.braumarkt.com/waterslot-bolletjesmodel) ~
+- tube
+- wood
+- plastic box 
+- printplate
+
 
 ## Description
 
+With this project you can measuring the fermentation bubbles. Every 60 secs, the actually bubble count has been saved in an array. The length of the array is 60. (60 times 60 is 1 Hour). After an hour the counter array start on zero. So there will keep measuring of 1 hour of bubbles. Every 60 seconds there is a check if the max count bubble in hour has been made. This is the peek in you fermentation scope. With the current 60 seconds count you see if the fermentation is finished.
 
-
+For this project you have to know how you can solder electrical components. With the schema and the photo you can create your own bubble counter. 
 
 ## Schema
 
