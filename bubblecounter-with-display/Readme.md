@@ -1,4 +1,4 @@
-#Project - Bubble counter with a display - ESP8266
+# Project - Bubble counter with a display - ESP8266
 
 Using:
 - adafruit-feather-huzzah-esp8266 [ref](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/overview)
