@@ -27,6 +27,8 @@ const int bubblearraySize = 60;
 int bubbleArray[bubblearraySize]; 
 int counter = 0;
 
+bool rizing = false;
+
 int sensorState = 0, lastState=0;
 #define SENSORPIN 16
 
@@ -63,7 +65,7 @@ void SetBubbleInArray(){
       }  
       bubble = 0; 
       u8x8.setCursor(0,3);
-u8x8.clear();
+     u8x8.clear();
   }
 }
 
@@ -72,8 +74,15 @@ void GetSumBubbleInHour()
   int total = 0;
   for ( int i = 0; i < bubblearraySize; ++i )
       total += bubbleArray[ i ];
-  if(maxBubbleInAHour < total)
+  Serial.println(total);
+  Serial.println(maxBubbleInAHour);
+  if(maxBubbleInAHour < total){
     maxBubbleInAHour = total;
+    rizing = true;
+  }
+  else{
+    rizing = false;
+  }
 }
 
 void readBubble(){
@@ -96,6 +105,12 @@ void writeStatusDisplay(){
   u8x8.setCursor(0,2);
   u8x8.print("Max  : ");
   u8x8.print(maxBubbleInAHour);
+  if(rizing){
+    u8x8.print(" U");
+  }
+  else{
+    u8x8.print(" D");
+  }
 
   u8x8.setCursor(0,3);
   u8x8.setFont(u8x8_font_inb33_3x6_n);
